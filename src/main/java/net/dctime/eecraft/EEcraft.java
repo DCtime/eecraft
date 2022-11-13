@@ -21,6 +21,7 @@ import java.util.stream.Collectors;
 @Mod(EEcraft.MOD_ID)
 public class EEcraft
 {
+    // The journey has started
     public static final String MOD_ID = "eecraft";
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
