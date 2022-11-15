@@ -1,6 +1,8 @@
 package net.dctime.eecraft.item;
 
 import net.dctime.eecraft.EEcraft;
+import net.dctime.eecraft.block.ModBlocks;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -8,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IRegistryDelegate;
 import net.minecraftforge.registries.RegistryObject;
+import org.lwjgl.system.CallbackI;
 
 public class ModItems
 {
@@ -32,6 +35,10 @@ public class ModItems
     // raw_citrine is added to the register ITEM
     public static final RegistryObject<Item> RAW_CITRINE =
             ITEMS.register("raw_citrine", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
+    public static final RegistryObject<Item> TRINITROTOLUENE =
+            ITEMS.register("trinitrotoluene", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
 
     // register the DeferredRegister
     // This method must be called in the tutorial mod's class, because the eventBus is at the ModItems Class

@@ -1,5 +1,6 @@
 package net.dctime.eecraft;
 
+import net.dctime.eecraft.block.ModBlocks;
 import net.dctime.eecraft.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -32,8 +33,10 @@ public class EEcraft
     public EEcraft() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        // register item list when starting up
+        // add items to the game when started
         ModItems.register(eventBus);
+        // add blocks to the game when started
+        ModBlocks.register(eventBus);
 
         // Register the setup method for modloading
         eventBus.addListener(this::setup);
