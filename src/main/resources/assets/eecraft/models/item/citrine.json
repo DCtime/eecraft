@@ -1,6 +1,6 @@
 {
-  "parent": "item/gemerated",
-  "texture": {
+  "parent": "item/generated",
+  "textures": {
     "layer0": "eecraft:item/citrine"
   }
 }
