@@ -1,6 +1,8 @@
 package net.dctime.eecraft.item;
 
 import net.dctime.eecraft.EEcraft;
+import net.dctime.eecraft.item.custom.ModDowsingRodItem;
+import net.dctime.eecraft.item.custom.ModVerticalEnergyEmitterItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -36,8 +38,12 @@ public class ModItems
             ITEMS.register("trinitrotoluene", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.EECRAFT_TAB)));
 
     // I made an item to go BOOM!!
-    public static final RegistryObject VERTICAL_ENERGY_EMITTER =
+    public static final RegistryObject<Item> VERTICAL_ENERGY_EMITTER =
             ITEMS.register("vertical_energy_emitter", () -> new ModVerticalEnergyEmitterItem(new Item.Properties().tab(ModCreativeModeTab.EECRAFT_TAB)));
+
+    // A item which detects ores
+    public static final RegistryObject<Item> DOWSING_ROD =
+            ITEMS.register("dowsing_rod", () -> new ModDowsingRodItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
     // register the DeferredRegister
     // This method must be called in the tutorial mod's class, because the eventBus is at the ModItems Class

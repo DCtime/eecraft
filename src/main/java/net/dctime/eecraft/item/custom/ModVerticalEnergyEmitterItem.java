@@ -1,4 +1,4 @@
-package net.dctime.eecraft.item;
+package net.dctime.eecraft.item.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;
