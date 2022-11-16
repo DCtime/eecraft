@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures":
+  {
+    "all": "eecraft:block/raw_citrine_block"
+  }
+}

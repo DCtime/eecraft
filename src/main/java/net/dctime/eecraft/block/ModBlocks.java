@@ -33,6 +33,12 @@ public class ModBlocks
     public static final RegistryObject<Item> CITRINE_BLOCK_ITEM =
             ModItems.ITEMS.register("citrine_block", () -> new BlockItem(CITRINE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
+    public static final RegistryObject<Block> RAW_CITRINE_BLOCK = BLOCKS.register("raw_citrine_block", () -> new Block(
+            BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Item> RAW_CITRINE_BLOCK_ITEM = ModItems.ITEMS.register("raw_citrine_block", () -> new
+            BlockItem(RAW_CITRINE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
 
     public static void register(IEventBus eventBus)
     {
