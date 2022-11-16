@@ -2,5 +2,12 @@
   "item.eecraft.citrine": "Citrine",
   "item.eecraft.raw_citrine": "Raw Citrine",
   "item.eecraft.trinitrotoluene": "Trinitrotoluene",
-  "block.eecraft.citrine_block": "Citrine Block"
+  "block.eecraft.citrine_block": "Citrine Block",
+  "block.eecraft.deepslate_citrine_ore": "Deepslate Citrine Ore",
+  "block.eecraft.raw_citrine_block": "Raw Citrine Block",
+  "block.eecraft.citrine_ore": "Citrine Ore",
+  "block.eecraft.netherrack_citrine_ore": "Netherrack Citrine Ore",
+  "block.eecraft.endstone_citrine_ore": "Endstone Citrine Ore",
+  "itemGroup.tutorial_tab": "Tutorial",
+  "itemGroup.eecraft_tab": "EEcraft"
 }

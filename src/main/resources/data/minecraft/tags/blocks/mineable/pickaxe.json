@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "eecraft:citrine_block",
+    "eecraft:raw_citrine_block",
+    "eecraft:citrine_ore",
+    "eecraft:deepslate_citrine_ore",
+    "eecraft:netherrack_citrine_ore",
+    "eecraft:endstone_citrine_ore"
+  ]
+}
