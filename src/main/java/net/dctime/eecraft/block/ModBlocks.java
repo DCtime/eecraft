@@ -1,6 +1,7 @@
 package net.dctime.eecraft.block;
 
 import net.dctime.eecraft.EEcraft;
+import net.dctime.eecraft.block.custom.ModSpeedyBlock;
 import net.dctime.eecraft.item.ModCreativeModeTab;
 import net.dctime.eecraft.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -69,6 +70,12 @@ public class ModBlocks
 
     public static final RegistryObject<Item> ENDSTONE_CITRINE_ORE_ITEM = ModItems.ITEMS.register("endstone_citrine_ore",
             () -> new BlockItem(ENDSTONE_CITRINE_ORE.get(), new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Block> SPEEDY_BLOCK = BLOCKS.register("speedy_block",
+            () -> new ModSpeedyBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f)));
+
+    public static final RegistryObject<Item> SPEEDY_BLOCK_ITEM = ModItems.ITEMS.register("speedy_block",
+            () -> new BlockItem(SPEEDY_BLOCK.get(), new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
 
 

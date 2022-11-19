@@ -8,6 +8,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.lwjgl.system.CallbackI;
 
 public class ModItems
 {
@@ -43,14 +44,17 @@ public class ModItems
 
     // A item which detects ores
     public static final RegistryObject<Item> DOWSING_ROD =
-            ITEMS.register("dowsing_rod", () -> new ModDowsingRodItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+            ITEMS.register("dowsing_rod", () -> new ModDowsingRodItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).defaultDurability(15)));
 
+    public static final RegistryObject<Item> CUCUMBER =
+            ITEMS.register("cucumber", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).food(ModFoods.CUCUMBER)));
     // register the DeferredRegister
     // This method must be called in the tutorial mod's class, because the eventBus is at the ModItems Class
     // EEcraft class has the event bus
     // This must be called or it cannot work
 
     // The ITEMS register is listened by the eventBus
+
     public static void register(IEventBus eventBus)
     {
         ITEMS.register(eventBus);
