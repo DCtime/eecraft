@@ -1,13 +1,18 @@
 package net.dctime.eecraft.item;
 
 import net.dctime.eecraft.EEcraft;
+import net.dctime.eecraft.item.custom.ModCoalCokeItem;
 import net.dctime.eecraft.item.custom.ModDowsingRodItem;
 import net.dctime.eecraft.item.custom.ModVerticalEnergyEmitterItem;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.Nullable;
 import org.lwjgl.system.CallbackI;
 
 public class ModItems
@@ -48,6 +53,10 @@ public class ModItems
 
     public static final RegistryObject<Item> CUCUMBER =
             ITEMS.register("cucumber", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).food(ModFoods.CUCUMBER)));
+
+    public static final RegistryObject<Item> COAL_COKE = ITEMS.register("coal_coke",
+            () -> new ModCoalCokeItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
     // register the DeferredRegister
     // This method must be called in the tutorial mod's class, because the eventBus is at the ModItems Class
     // EEcraft class has the event bus
