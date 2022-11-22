@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "eecraft:block/citrine_block",
+    "top": "eecraft:block/citrine_block",
+    "side": "eecraft:block/citrine_block"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "eecraft:block/citrine_slab"
+    },
+    "type=double": {
+      "model": "eecraft:block/citrine_block"
+    },
+    "type=top": {
+      "model": "eecraft:block/citrine_slab_top"
+    }
+  }
+}

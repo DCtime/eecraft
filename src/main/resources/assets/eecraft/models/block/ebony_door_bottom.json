@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom",
+  "textures": {
+    "top": "eecraft:block/ebony_door_top",
+    "bottom": "eecraft:block/ebony_door_bottom"
+  }
+}

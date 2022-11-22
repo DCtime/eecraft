@@ -2,6 +2,8 @@ package net.dctime.eecraft;
 
 import net.dctime.eecraft.block.ModBlocks;
 import net.dctime.eecraft.item.ModItems;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -38,8 +40,10 @@ public class EEcraft
         // add blocks to the game when started
         ModBlocks.register(eventBus);
 
-        // Register the setup method for modloading
+        // Register the setup and clientSetup function for mod loading
         eventBus.addListener(this::setup);
+        eventBus.addListener(this::clientSetup);
+
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -50,5 +54,11 @@ public class EEcraft
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+    }
+
+    private void clientSetup(final FMLCommonSetupEvent event)
+    {
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EBONY_DOOR.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EBONY_TRAPDOOR.get(), RenderType.translucent());
     }
 }

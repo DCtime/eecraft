@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "eecraft:block/citrine_pressure_plate"
+    },
+    "powered=true": {
+      "model": "eecraft:block/citrine_pressure_plate_down"
+    }
+  }
+}

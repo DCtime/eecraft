@@ -4,12 +4,14 @@ import net.dctime.eecraft.EEcraft;
 import net.dctime.eecraft.block.custom.ModSpeedyBlock;
 import net.dctime.eecraft.item.ModCreativeModeTab;
 import net.dctime.eecraft.item.ModItems;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
+import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -77,7 +79,60 @@ public class ModBlocks
     public static final RegistryObject<Item> SPEEDY_BLOCK_ITEM = ModItems.ITEMS.register("speedy_block",
             () -> new BlockItem(SPEEDY_BLOCK.get(), new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
+    public static final RegistryObject<Block> CITRINE_STAIRS = BLOCKS.register("citrine_stairs",
+            () -> new StairBlock(CITRINE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.METAL)));
 
+    public static final RegistryObject<Item> CITRINE_STAIRS_ITEM = ModItems.ITEMS.register("citrine_stairs",
+            () -> new BlockItem(CITRINE_STAIRS.get(), new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Block> CITRINE_SLAB = BLOCKS.register("citrine_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.METAL)));
+
+    public static final RegistryObject<Item> CITRINE_SLAB_ITEM = ModItems.ITEMS.register("citrine_slab",
+            () -> new BlockItem(CITRINE_SLAB.get(), new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Block> CITRINE_FENCE = BLOCKS.register("citrine_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.METAL)));
+
+    public static final RegistryObject<Item> CITRINE_FENCES_ITEM = ModItems.ITEMS.register("citrine_fence",
+            () -> new BlockItem(CITRINE_FENCE.get(), new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Block> CITRINE_FENCE_GATE = BLOCKS.register("citrine_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.METAL)));
+
+    public static final RegistryObject<Item> CITRINE_FENCE_GATE_ITEM = ModItems.ITEMS.register("citrine_fence_gate",
+            () -> new BlockItem(CITRINE_FENCE_GATE.get(), new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Block> CITRINE_WALL = BLOCKS.register("citrine_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.METAL)));
+
+    public static final RegistryObject<Item> CITRINE_WALL_ITEM = ModItems.ITEMS.register("citrine_wall",
+            () -> new BlockItem(CITRINE_WALL.get(), new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Block> EBONY_DOOR = BLOCKS.register("ebony_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.of(Material.METAL).noOcclusion()));
+
+    public static final RegistryObject<Item> EBONY_DOOR_ITEM = ModItems.ITEMS.register("ebony_door",
+            () -> new BlockItem(EBONY_DOOR.get(), new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    // no Occlusion let the render of near blocks active
+    public static final RegistryObject<Block> EBONY_TRAPDOOR = BLOCKS.register("ebony_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.METAL).noOcclusion()));
+
+    public static final RegistryObject<Item> EBONY_TRAPDOOR_ITEM = ModItems.ITEMS.register("ebony_trapdoor",
+            () -> new BlockItem(EBONY_TRAPDOOR.get(), new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Block> CITRINE_BUTTON = BLOCKS.register("citrine_button",
+            () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.METAL)));
+
+    public static final RegistryObject<Item> CITRINE_BUTTON_ITEM = ModItems.ITEMS.register("citrine_button",
+            () -> new BlockItem(CITRINE_BUTTON.get(), new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Block> CITRINE_PRESSURE_PLATE = BLOCKS.register("citrine_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.METAL)));
+
+    public static final RegistryObject<Item> CITRINE_PRESSURE_PLATE_ITEM = ModItems.ITEMS.register("citrine_pressure_plate",
+            () -> new BlockItem(CITRINE_PRESSURE_PLATE.get(), new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
     public static void register(IEventBus eventBus)
     {

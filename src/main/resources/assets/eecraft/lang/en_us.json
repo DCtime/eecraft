@@ -8,6 +8,28 @@
   "block.eecraft.citrine_ore": "Citrine Ore",
   "block.eecraft.netherrack_citrine_ore": "Netherrack Citrine Ore",
   "block.eecraft.endstone_citrine_ore": "Endstone Citrine Ore",
+
   "itemGroup.tutorial_tab": "Tutorial",
-  "itemGroup.eecraft_tab": "EEcraft"
+  "itemGroup.eecraft_tab": "EEcraft",
+
+  "item.eecraft.dowsing_rod": "Dowsing Rod",
+  "tooltip.eecraft.item.dowsing_rod": "Press §eALT§r For More Information",
+  "tooltip.eecraft.item.dowsing_rod.altdown": "Right click on a block to search ores under the block",
+
+  "block.eecraft.speedy_block": "Speedy Block",
+  "tooltip.eecraft.block.speedy_block": "Stand On The Block To Get Speed Boost",
+
+  "item.eecraft.cucumber": "Cucumber",
+  "item.eecraft.coal_coke": "Coal Coke",
+  "block.eecraft.citrine_stairs": "Citrine Stairs",
+  "block.eecraft.citrine_slab": "Citrine Slab",
+
+  "block.eecraft.citrine_fence": "Citrine Fence",
+  "block.eecraft.citrine_fence_gate": "Citrine Fence Gate",
+  "block.eecraft.citrine_wall": "Citrine Wall",
+  "block.eecraft.ebony_door": "Ebony Door",
+  "block.eecraft.ebony_trapdoor": "Ebony Trapdoor",
+  "block.eecraft.citrine_button": "Citrine Button",
+  "block.eecraft.citrine_pressure_plate": "Citrine Pressure Plate",
+  "item.eecraft.vertical_energy_emitter": "Vertical Energy Emitter"
 }
