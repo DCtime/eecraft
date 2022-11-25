@@ -31,5 +31,11 @@
   "block.eecraft.ebony_trapdoor": "Ebony Trapdoor",
   "block.eecraft.citrine_button": "Citrine Button",
   "block.eecraft.citrine_pressure_plate": "Citrine Pressure Plate",
-  "item.eecraft.vertical_energy_emitter": "Vertical Energy Emitter"
+  "item.eecraft.vertical_energy_emitter": "Vertical Energy Emitter",
+  "item.eecraft.citrine_sword": "Citrine Sword",
+  "item.eecraft.citrine_axe": "Citrine Axe",
+  "item.eecraft.citrine_pickaxe": "Citrine Pickaxe",
+  "item.eecraft.citrine_shovel": "Citrine Shovel",
+  "item.eecraft.citrine_hoe": "Citrine Hoe",
+  "item.eecraft.citrine_helmet": "Citrine Helmet"
 }

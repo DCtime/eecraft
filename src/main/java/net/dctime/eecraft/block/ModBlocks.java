@@ -5,6 +5,7 @@ import net.dctime.eecraft.block.custom.ModSpeedyBlock;
 import net.dctime.eecraft.item.ModCreativeModeTab;
 import net.dctime.eecraft.item.ModItems;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -133,6 +134,19 @@ public class ModBlocks
 
     public static final RegistryObject<Item> CITRINE_PRESSURE_PLATE_ITEM = ModItems.ITEMS.register("citrine_pressure_plate",
             () -> new BlockItem(CITRINE_PRESSURE_PLATE.get(), new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Block> PINK_ROSE = BLOCKS.register("pink_rose",
+            () -> new FlowerBlock(MobEffects.LEVITATION, 8 * 24,
+                    BlockBehaviour.Properties.of(Material.PLANT).noCollission().sound(SoundType.GRASS)));
+
+    public static final RegistryObject<Item> PINK_ROSE_ITEM = ModItems.ITEMS.register("pink_rose",
+            () -> new BlockItem(PINK_ROSE.get(), new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Block> POTTED_PINK_ROSE = BLOCKS.register("potted_pink_rose",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock) (Blocks.FLOWER_POT), PINK_ROSE,
+                    BlockBehaviour.Properties.of(Material.DECORATION)));
+
+
 
     public static void register(IEventBus eventBus)
     {
